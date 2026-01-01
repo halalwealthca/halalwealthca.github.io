@@ -200,7 +200,7 @@
                     <h3 class="text-xl font-bold mb-6 flex items-center gap-2 text-emerald-800">
                         What makes a stock Halal?
                     </h3>
-                    <div class="space-y-4">
+                    <div class="space-y-4 flex-1">
                         <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm">
                             <h4 class="font-bold text-slate-800 mb-1">1. Business Screening</h4>
                             <p class="text-sm text-slate-600 leading-relaxed">The company cannot make its money from: Interest (Banks), Alcohol, Tobacco, Gambling, Adult Entertainment, or Pork Products.</p>
@@ -212,44 +212,51 @@
                     </div>
                 </div>
                 
-                <div class="bg-slate-900 rounded-3xl p-6 md:p-8 text-white relative overflow-hidden">
+                <div class="bg-slate-900 rounded-3xl p-8 text-white relative overflow-hidden shadow-2xl">
                     <div class="relative z-10">
-                        <h4 class="text-emerald-400 font-bold text-xs uppercase tracking-widest mb-2">HISTORICAL GROWTH (%)</h4>
-                        <p class="text-sm text-slate-400 mb-6">Comparing the growth of $100 invested over time. Past performances don't indicate future results.</p>
-                        <div class="space-y-4">
+                        <h4 class="text-emerald-400 font-bold text-xs uppercase tracking-widest mb-1">20-Year Growth Comparison</h4>
+                        <p class="text-[10px] text-slate-400 mb-8 italic">Starting with $100 in 2005</p>
+                        
+                        <div class="space-y-8">
+                            <!-- S&P 500 -->
                             <div class="space-y-2">
-                                <div class="flex justify-between text-xs font-medium">
-                                    <span>Standard (S&P 500)</span>
-                                    <span>$680</span>
-                                </div>
-                                <div class="w-full h-2 bg-slate-800 rounded-full overflow-hidden">
-                                    <div class="h-full bg-slate-500 rounded-full" style="width: 85%"></div>
+                                <div class="flex justify-between text-xs font-medium"><span>Standard ETFs (e.g. S&P 500)</span><span class="font-bold text-white">$680</span></div>
+                                <div class="w-full h-3 bg-slate-800 rounded-full overflow-hidden">
+                                    <div class="h-full bg-slate-500 rounded-full" style="width: 100%"></div>
                                 </div>
                             </div>
+                            <!-- Halal -->
                             <div class="space-y-2">
-                                <div class="flex justify-between text-xs font-bold text-emerald-400">
-                                    <span>Halal (SPUS)</span>
-                                    <span>$655</span>
-                                </div>
-                                <div class="w-full h-2 bg-slate-800 rounded-full overflow-hidden">
-                                    <div class="h-full bg-emerald-500 rounded-full" style="width: 82%"></div>
+                                <div class="flex justify-between text-xs font-bold text-emerald-400"><span>Halal ETFs (e.g. SPUS)</span><span>$655</span></div>
+                                <div class="w-full h-3 bg-slate-800 rounded-full overflow-hidden">
+                                    <div class="h-full bg-emerald-500 rounded-full" style="width: 96%"></div>
                                 </div>
                             </div>
+                            <!-- Cash -->
                             <div class="space-y-2">
-                                <div class="flex justify-between text-xs font-medium">
-                                    <span>Cash / Savings</span>
-                                    <span>$125</span>
+                                <div class="flex justify-between text-xs font-medium"><span>Cash Savings (No Interest)</span><span class="text-slate-300">$100</span></div>
+                                <div class="w-full h-3 bg-slate-800 rounded-full overflow-hidden relative">
+                                    <div class="h-full bg-slate-600 rounded-full" style="width: 14.7%"></div>
+                                    <!-- Purchasing Power Loss Gradient -->
+                                    <div class="absolute top-0 left-[8%] h-full w-[6.7%] bg-rose-500/40"></div>
                                 </div>
-                                <div class="w-full h-2 bg-slate-800 rounded-full overflow-hidden">
-                                    <div class="h-full bg-amber-600 rounded-full" style="width: 15%"></div>
+                                <div class="flex justify-between items-center text-[10px] text-rose-400 font-bold mt-1">
+                                    <span></span>
+                                    <span>Real Purchasing Power: ~$60</span>
                                 </div>
                             </div>
+                        </div>
+
+                        <div class="mt-10 p-4 bg-rose-950/30 rounded-xl border border-rose-900/50">
+                            <p class="text-[11px] text-rose-200 leading-relaxed">
+                                <strong>The Cash Trap:</strong> $100 kept in cash 20 years ago is still $100 today. But because of inflation, that $100 only buys about <strong>$60 worth</strong> of today's groceries and gas. Investing in <strong>Halal Assets</strong> is the only way to stay ahead.
+                            </p>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="mt-12">
+                    <div class="bg-slate-900 rounded-3xl p-8 text-white relative overflow-hidden shadow-2xl h-full">
                 <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
                     <h4 class="font-bold text-slate-800">Popular Halal ETFs:</h4>
                     <a href="https://amalinvest.com/halal-investing/halal-etfs-compared" target="_blank" class="text-sm text-emerald-700 font-bold hover:underline">View Detailed ETF Comparison Guide →</a>
@@ -471,7 +478,7 @@
         <!-- Projection -->
         <section class="text-center pb-16">
             <h2 class="text-2xl font-bold mb-4">The Wealth Projection</h2>
-            <p class="text-slate-600 mb-10 max-w-xl mx-auto">The graph shows how your wealth grows when you leave it alone for 20 years. Compounded gains are slow at first, then accelerate.</p>
+            <p class="text-slate-600 mb-10 max-w-xl mx-auto">The graph shows how your wealth grows over 20 years with consistent monthly deposits. Compounded gains are slow at first, then accelerate.</p>
             
             <div class="max-w-xl mx-auto p-6 md:p-8 bg-white border border-slate-200 rounded-3xl shadow-xl">
                 <div class="mb-8 flex justify-between items-end">
