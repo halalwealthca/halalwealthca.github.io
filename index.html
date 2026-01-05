@@ -40,11 +40,19 @@
                 <span class="text-2xl">🌱</span>
                 <span class="font-bold text-emerald-800 text-xl tracking-tight">HalalWealthCA</span>
             </a>
-            <div class="hidden md:flex gap-8 text-sm font-medium text-slate-600">
-                <a href="#intro" class="hover:text-emerald-700 transition">Home</a>
-                <a href="#accounts" class="hover:text-emerald-700 transition">Account Types</a>
-                <a href="#criteria" class="hover:text-emerald-700 transition">Halal Criteria</a>
-                <a href="#steps" class="hover:text-emerald-700 transition">How to Start</a>
+            <div class="flex items-center gap-6">
+                <div class="hidden md:flex gap-8 text-sm font-medium text-slate-600">
+                    <a href="#intro" class="nav-link hover:text-emerald-700 transition">Home</a>
+                    <a href="#accounts" class="nav-link hover:text-emerald-700 transition">Account Types</a>
+                    <a href="#criteria" class="nav-link hover:text-emerald-700 transition">Halal Criteria</a>
+                    <a href="#steps" class="nav-link hover:text-emerald-700 transition">How to Start</a>
+                </div>
+                <!-- Language Selector -->
+                <select id="langSelector" class="text-sm font-medium px-3 py-2 rounded border border-slate-300 bg-white text-slate-700 hover:border-emerald-500 cursor-pointer">
+                    <option value="en">English</option>
+                    <option value="ar">العربية</option>
+                    <option value="ur">اردو</option>
+                </select>
             </div>
         </div>
     </nav>
@@ -590,4 +598,151 @@
     </footer>
 
 </body>
+
+<script>
+const translations = {
+  en: {
+    investingForMuslims: "Investing for Muslims in Canada",
+    heroDesc: "Many Muslims keep their savings in cash because they assume all investments involve interest — this is not true!",
+    accountsBtn: "What are investment accounts?",
+    criteriaBtn: "What to invest in?",
+    stepsBtn: "How to get started?",
+    disclaimer: "Disclaimer: This guide provides educational information on financial logistics and general principles. It does not constitute a Fatwa or personalized financial advice.",
+    home: "Home",
+    accountTypes: "Account Types",
+    halalCriteria: "Halal Criteria",
+    howToStart: "How to Start",
+    buildHalalWealth: "Build Halal Wealth",
+    buildDescription: "This guide explains how to get started in investing in the stock market in the safest & cheapest way possible, and how to use Canadian tax-sheltered accounts to buy halal assets that grow over time.",
+    shareGuide: "If you find this guide useful, please share it with your friends and keep us in your dua'a.",
+    accountsHeading: "Common Registered Investment Accounts: TFSA and RRSP",
+    accountsIntro: "To \"buy stocks\", first you need to open an investing account. Start with a tax-sheltered account, then you put assets inside it. TFSA and RRSP are powerful Canadian government programs that let you grow your wealth tax-free.",
+    tfsa: "TFSA",
+    taxFreeSavings: "Tax-Free Savings",
+    tfsaDesc: "You pay tax on your salary, put what's left into the TFSA, and never pay tax again on the growth or withdrawals.",
+    example: "Example",
+    tfsaExample: "You invest $1,000. It grows to $5,000. You take the $5,000 out. You pay $0 in tax.",
+    officialGuide: "Official CRA Guide",
+    rrsp: "RRSP",
+    registeredRetirement: "Registered Retirement",
+    rrspDesc: "Money you put in reduces your taxable income today. The government gives you a tax refund now, but you pay tax when you withdraw it at retirement.",
+    taxRefundExample: "Tax Refund Example",
+    rrspExample: "If you earn $70,000/yr (approx. 30% tax bracket) and contribute $5,000 to your RRSP, you will receive a tax refund of ~$1,500 when you file your taxes.",
+    whichToChoose: "Which to choose?",
+    tfsaBullet: "TFSA: If you are a beginner or make a moderate salary. It's very flexible.",
+    rrspBullet: "RRSP: If you are a high earner (usually >$90k) and want the refund.",
+    rrspDeadline: "Important: The RRSP deadline is the end of February!",
+    rrspDeadlineDesc: "The 60-day period after Dec 31st is the best time to start contributing to your RRSP. Contributions made before the end of February can be used to lower your taxable income for the previous year, allowing you to claim a refund immediately when you file your tax return.",
+    faqTitle: "RRSP & TFSA FAQ",
+    whatToHold: "What to hold: Stocks vs. ETFs",
+    beyondStocks: "Beyond Stocks: Precious Metals",
+    howToGetStarted: "How to Get Started (The DIY Method)",
+    youDontNeed: "You don't need a financial advisor to get started!",
+  },
+  ar: {
+    investingForMuslims: "الاستثمار للمسلمين في كندا",
+    heroDesc: "يحتفظ العديد من المسلمين بمدخراتهم نقداً لأنهم يفترضون أن جميع الاستثمارات تتضمن فائدة — هذا ليس صحيحاً!",
+    accountsBtn: "ما هي حسابات الاستثمار؟",
+    criteriaBtn: "فيماذا تستثمر؟",
+    stepsBtn: "كيف تبدأ؟",
+    disclaimer: "إخلاء المسؤولية: يقدم هذا الدليل معلومات تعليمية عن الخدمات اللوجستية المالية والمبادئ العامة. وهي لا تشكل فتوى أو نصيحة مالية شخصية.",
+    home: "الصفحة الرئيسية",
+    accountTypes: "أنواع الحسابات",
+    halalCriteria: "معايير الحلال",
+    howToStart: "كيفية البدء",
+    buildHalalWealth: "بناء الثروة الحلال",
+    buildDescription: "يشرح هذا الدليل كيفية البدء في الاستثمار في سوق الأوراق المالية بأكثر الطرق أماناً وسهولة، وكيفية استخدام حسابات الادخار المحمية من الضرائب الكندية لشراء أصول حلال تنمو بمرور الوقت.",
+    shareGuide: "إذا وجدت هذا الدليل مفيداً، يرجى مشاركته مع أصدقائك وادع لنا.",
+    accountsHeading: "حسابات الاستثمار المسجلة الشهيرة: TFSA و RRSP",
+    accountsIntro: "لـ \"شراء الأسهم\"، تحتاج أولاً إلى فتح حساب استثماري. ابدأ بحساب محمي من الضرائب، ثم ضع الأصول بداخله. TFSA و RRSP برامج حكومية كندية قوية تسمح لك بنمو ثروتك بدون ضرائب.",
+    tfsa: "TFSA",
+    taxFreeSavings: "حساب الادخار الخالي من الضرائب",
+    tfsaDesc: "تدفع ضريبة على راتبك، وتضع ما تبقى في TFSA، ولن تدفع ضريبة مرة أخرى على النمو أو السحب.",
+    example: "مثال",
+    tfsaExample: "تستثمر 1,000 دولار. ينمو إلى 5,000 دولار. تسحب المبلغ 5,000 دولار. تدفع 0 دولار ضريبة.",
+    officialGuide: "الدليل الرسمي",
+    rrsp: "RRSP",
+    registeredRetirement: "خطة التقاعد المسجلة",
+    rrspDesc: "الأموال التي تضعها تقلل من دخلك الخاضع للضريبة اليوم. الحكومة تعطيك استرجاعاً ضريبياً الآن، لكنك تدفع ضريبة عند السحب عند التقاعد.",
+    taxRefundExample: "مثال استرجاع الضريبة",
+    rrspExample: "إذا كنت تكسب 70,000 دولار سنوياً (تقريباً في فئة ضريبية بنسبة 30%) وساهمت بمبلغ 5,000 دولار في RRSP، فسوف تحصل على استرجاع ضريبي بحوالي 1,500 دولار عند تقديمك إقرارك الضريبي.",
+    whichToChoose: "أي واحد تختار؟",
+    tfsaBullet: "TFSA: إذا كنت مبتدئاً أو تكسب راتباً معتدلاً. إنه مرن جداً.",
+    rrspBullet: "RRSP: إذا كنت من كبار العاملين (عادة أكثر من 90 ألف دولار) وتريد استرجاع الضريبة.",
+    rrspDeadline: "مهم: موعد RRSP هو نهاية فبراير!",
+    rrspDeadlineDesc: "فترة 60 يوماً بعد 31 ديسمبر هي أفضل وقت للبدء في المساهمة في RRSP. يمكن استخدام المساهمات التي يتم تقديمها قبل نهاية فبراير لتقليل دخلك الخاضع للضريبة في السنة السابقة، مما يسمح لك بالمطالبة باسترجاع فوري عند تقديمك إقرارك الضريبي.",
+    faqTitle: "الأسئلة الشائعة حول RRSP و TFSA",
+    whatToHold: "ما يجب الاحتفاظ به: الأسهم مقابل صناديق الاستثمار المتداولة",
+    beyondStocks: "ما وراء الأسهم: المعادن الثمينة",
+    howToGetStarted: "كيفية البدء (طريقة DIY)",
+    youDontNeed: "أنت لا تحتاج إلى مستشار مالي للبدء!",
+  },
+  ur: {
+    investingForMuslims: "کنیڈا میں مسلمانوں کے لیے سرمایہ کاری",
+    heroDesc: "بہت سے مسلمان اپنی بچتوں کو نقد رکھتے ہیں کیونکہ وہ سمجھتے ہیں کہ تمام سرمایہ کاریوں میں سود شامل ہے — یہ غلط ہے!",
+    accountsBtn: "سرمایہ کاری کے اکاؤنٹس کیا ہیں؟",
+    criteriaBtn: "آپ کس میں سرمایہ کاری کریں؟",
+    stepsBtn: "آپ کیسے شروع کریں؟",
+    disclaimer: "مسئولیت کا اعلان: یہ گائیڈ مالیاتی لاجسٹکس اور عمومی اصولوں کے بارے میں تعلیمی معلومات فراہم کرتا ہے۔ یہ فتوی یا ذاتی مالیاتی مشورے کی تشکیل نہیں کرتے۔",
+    home: "ہوم",
+    accountTypes: "اکاؤنٹ کی اقسام",
+    halalCriteria: "حلال معیار",
+    howToStart: "شروع کرنے کے لیے",
+    buildHalalWealth: "حلال دولت بنائیں",
+    buildDescription: "یہ گائیڈ سٹاک مارکیٹ میں سب سے محفوظ اور سستے طریقے سے شروع کرنے کی وضاحت کرتا ہے، اور کناڈی ٹیکس سے محفوظ اکاؤنٹس استعمال کرتے ہوئے حلال اثاثے خریدنے کے بارے میں بتاتا ہے جو وقت کے ساتھ بڑھتے ہیں۔",
+    shareGuide: "اگر آپ کو یہ گائیڈ مفید لگا تو براہ کرم اپنے دوستوں کے ساتھ شیئر کریں اور ہمارے لیے دعا کریں۔",
+    accountsHeading: "عام رجسٹرڈ سرمایہ کاری کے اکاؤنٹس: TFSA اور RRSP",
+    accountsIntro: "\"اسٹاک خریدنے\" کے لیے، پہلے آپ کو سرمایہ کاری کا اکاؤنٹ کھولنا ہے۔ ٹیکس سے محفوظ اکاؤنٹ سے شروع کریں، پھر اس میں اثاثے ڈالیں۔ TFSA اور RRSP طاقتور کناڈی حکومتی پروگرام ہیں جو آپ کو ٹیکس سے بغیر دولت بڑھانے دیتے ہیں۔",
+    tfsa: "TFSA",
+    taxFreeSavings: "ٹیکس فری سیونگز اکاؤنٹ",
+    tfsaDesc: "آپ اپنی تنخواہ پر ٹیکس دیتے ہیں، جو بچتا ہے اسے TFSA میں ڈالتے ہیں، اور نمو یا نکلوانے پر دوبارہ ٹیکس نہیں دیتے۔",
+    example: "مثال",
+    tfsaExample: "آپ $1,000 سرمایہ کاری کرتے ہیں۔ یہ $5,000 تک بڑھتا ہے۔ آپ $5,000 نکالتے ہیں۔ آپ $0 ٹیکس دیتے ہیں۔",
+    officialGuide: "سرکاری گائیڈ",
+    rrsp: "RRSP",
+    registeredRetirement: "رجسٹرڈ ریٹائرمنٹ سیونگز پلان",
+    rrspDesc: "جو پیسے آپ ڈالتے ہیں وہ آج آپ کی ٹیکس کی آمدنی میں کمی کرتے ہیں۔ حکومت آپ کو اب ٹیکس واپسی دیتی ہے، لیکن ریٹائرمنٹ پر نکلوانے سے پہلے ٹیکس دیتے ہیں۔",
+    taxRefundExample: "ٹیکس ریفنڈ کی مثال",
+    rrspExample: "اگر آپ سالانہ $70,000 کماتے ہیں (تقریباً 30% ٹیکس کی شرح میں) اور RRSP میں $5,000 کا حصہ ڈالتے ہیں، تو آپ اپنی ٹیکس ریٹرن جمع کرتے وقت تقریباً $1,500 کی ٹیکس واپسی حاصل کریں گے۔",
+    whichToChoose: "آپ کون سا منتخب کریں؟",
+    tfsaBullet: "TFSA: اگر آپ ابتدائی ہیں یا اعتدال پسند تنخواہ کماتے ہیں۔ یہ بہت لچکدار ہے۔",
+    rrspBullet: "RRSP: اگر آپ بڑی آمدنی والے ہیں (عام طور پر $90k سے زیادہ) اور ٹیکس واپسی چاہتے ہیں۔",
+    rrspDeadline: "اہم: RRSP کی مہلت فروری کے آخر تک ہے!",
+    rrspDeadlineDesc: "31 دسمبر کے بعد 60 دن کی مدت RRSP میں حصہ ڈالنا شروع کرنے کا بہترین وقت ہے۔ فروری کے آخر سے پہلے دیے گئے حصے اپنے سابقہ سال کی ٹیکس شدہ آمدنی میں کمی کے لیے استعمال کیے جا سکتے ہیں، جو آپ کو اپنی ٹیکس ریٹرن جمع کرتے وقت فوری واپسی کا دعویٰ کرنے کی اجازت دیتا ہے۔",
+    faqTitle: "RRSP اور TFSA کے بارے میں اکثر پوچھے جانے والے سوالات",
+    whatToHold: "کیا رکھنا چاہیے: اسٹاکس بمقابلہ سرمایہ کاری کے فنڈ",
+    beyondStocks: "اسٹاکس سے آگے: قیمتی دھاتیں",
+    howToGetStarted: "شروع کرنے کے لیے (DIY طریقہ)",
+    youDontNeed: "آپ کو شروع کرنے کے لیے مالیاتی مشیر کی ضرورت نہیں!",
+  }
+};
+
+let currentLang = localStorage.getItem('halalwealth-lang') || 'en';
+
+document.addEventListener('DOMContentLoaded', () => {
+  document.getElementById('langSelector').value = currentLang;
+  applyLanguage(currentLang);
+  
+  document.getElementById('langSelector').addEventListener('change', (e) => {
+    currentLang = e.target.value;
+    localStorage.setItem('halalwealth-lang', currentLang);
+    applyLanguage(currentLang);
+  });
+});
+
+function applyLanguage(lang) {
+  const t = translations[lang];
+  document.documentElement.lang = lang;
+  if (lang === 'ar' || lang === 'ur') {
+    document.documentElement.dir = 'rtl';
+    document.body.style.direction = 'rtl';
+    document.body.style.textAlign = 'right';
+  } else {
+    document.documentElement.dir = 'ltr';
+    document.body.style.direction = 'ltr';
+    document.body.style.textAlign = 'left';
+  }
+}
+</script>
+
 </html>
