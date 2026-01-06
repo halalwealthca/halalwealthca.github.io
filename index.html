@@ -227,20 +227,20 @@
                 
                 <div class="bg-slate-900 rounded-3xl p-8 text-white relative overflow-hidden shadow-2xl">
                     <div class="relative z-10">
-                        <h4 class="text-emerald-400 font-bold text-xs uppercase tracking-widest mb-1">20-Year Growth Comparison</h4>
-                        <p class="text-[10px] text-slate-400 mb-4 italic">Starting with $100 in 2005</p>
+                        <h4 class="text-emerald-400 font-bold text-xs uppercase tracking-widest mb-1" data-i18n="growthComparison">20-Year Growth Comparison</h4>
+                        <p class="text-[10px] text-slate-400 mb-4 italic" data-i18n="startingWith">Starting with $100 in 2005</p>
                         
                         <div class="space-y-2">
                             <!-- S&P 500 -->
                             <div class="space-y-2">
-                                <div class="flex justify-between text-xs font-medium"><span>Standard ETFs (e.g. S&P 500)</span><span class="font-bold text-white">$680</span></div>
+                                <div class="flex justify-between text-xs font-medium"><span data-i18n="standardETFs">Standard ETFs (e.g. S&P 500)</span><span class="font-bold text-white" data-i18n="standardETFsPrice">$680</span></div>
                                 <div class="w-full h-3 bg-slate-800 rounded-full overflow-hidden">
                                     <div class="h-full bg-slate-500 rounded-full" style="width: 100%"></div>
                                 </div>
                             </div>
                             <!-- Halal -->
                             <div class="space-y-2">
-                                <div class="flex justify-between text-xs font-bold text-emerald-400"><span>Halal ETFs (e.g. SPUS)</span><span>$655</span></div>
+                                <div class="flex justify-between text-xs font-bold text-emerald-400"><span data-i18n="halalETFs">Halal ETFs (e.g. SPUS)</span><span data-i18n="halalETFsPrice">$655</span></div>
                                 <div class="w-full h-3 bg-slate-800 rounded-full overflow-hidden">
                                     <div class="h-full bg-emerald-500 rounded-full" style="width: 96%"></div>
                                 </div>
@@ -738,6 +738,18 @@ const translations = {
     faq_resp_no_university_p: "You can get your original contributions back tax-free. However, the government grants (CESG) must be returned to the government, and you'll pay tax on any investment growth.",
     faq_fhsa_resp_age_title: "Are there age limits?",
     faq_fhsa_resp_age_p: "FHSA: Must be 18-71 and a first-time home buyer. RESP: You can contribute for up to 31 years after opening, but grants usually stop after the child turns 17.",
+    spus_audit_intro: "For example, ",
+    spus_audit_link: "here is an independent audit for SPUS",
+    spus_audit_suffix: " (in accordance with the AAOIFI standards) deeming it compliant from a Shariah perspective.",
+    diy: "DIY (do it yourself)",
+    growthComparison: "20-Year Growth Comparison",
+    startingWith: "Starting with $100 in 2005",
+    standardETFs: "Standard ETFs (e.g. S&P 500)",
+    standardETFsPrice: "$680",
+    halalETFs: "Halal ETFs (e.g. SPUS)",
+    halalETFsPrice: "$655",
+    faq_fhsa_no_home_title: "What if I don't buy a home with my FHSA?",
+    faq_fhsa_no_home_p: "If you don't buy a home within 15 years, you can transfer the FHSA balance to an RRSP tax-free (and without affecting your RRSP room). If you withdraw it as cash, it is fully taxed as income.",
     },
   ar: {
         siteTitle: "HalalWealthCA - الثروة الحلال للمقيمين في كندا",
@@ -872,6 +884,18 @@ const translations = {
         faq_resp_no_university_p: "يمكنك استرجاع مساهماتك الأصلية معفاة من الضرائب. ومع ذلك، يجب إعادة المنح الحكومية (CESG) إلى الحكومة، وستدفع ضريبة على أي نمو استثماري.",
         faq_fhsa_resp_age_title: "هل هناك حد أقصى للعمر؟",
         faq_fhsa_resp_age_p: "FHSA: يجب أن تكون بعمر 18-71 سنة وتشتري منزلك الأول. RESP: يمكنك المساهمة لمدة تصل إلى 31 سنة بعد الفتح، لكن المنح عادة ما تتوقف بعد أن يبلغ الطفل 17 سنة.",
+    spus_audit_intro: "على سبيل المثال، ",
+    spus_audit_link: "إليك تدقيق مستقل لـ SPUS",
+    spus_audit_suffix: " (وفقاً لمعايير AAOIFI) مما يعتبره متوافقاً من منظور شريعة إسلامية.",
+    diy: "DIY (اصنعه بنفسك)",
+    growthComparison: "مقارنة النمو لمدة 20 سنة",
+    startingWith: "بدءاً برصيد 100 دولار في عام 2005",
+    standardETFs: "صناديق استثمار قياسية (مثل S&P 500)",
+    standardETFsPrice: "$680",
+    halalETFs: "صناديق استثمار حلال (مثل SPUS)",
+    halalETFsPrice: "$655",
+    faq_fhsa_no_home_title: "ماذا إذا لم أشتري بيتاً بـ FHSA؟",
+    faq_fhsa_no_home_p: "إذا لم تشتري منزلاً خلال 15 سنة، يمكنك تحويل رصيد FHSA إلى RRSP معفى من الضرائب (وبدون التأثير على مساحة RRSP). إذا سحبته نقداً، فيتم فرض ضرائب عليه بالكامل كدخل.",
             officialGuideTFSA: "الدليل الرسمي لـ TFSA →",
             officialGuideRRSP: "الدليل الرسمي لـ RRSP →",
             officialGuideFHSA: "الدليل الرسمي لـ FHSA →",
@@ -968,6 +992,18 @@ const translations = {
     faq_resp_no_university_p: "آپ اپنی اصل شراکتیں ٹیکس سے آزادانہ واپس حاصل کر سکتے ہیں۔ تاہم، حکومتی گرانٹیں (CESG) حکومت کو واپس کی جانی چاہیں، اور آپ کو کسی بھی سرمایہ کاری کی نمو پر ٹیکس ادا کرنا ہوگا۔",
     faq_fhsa_resp_age_title: "کیا عمر کی حد ہے؟",
     faq_fhsa_resp_age_p: "FHSA: 18-71 ہونے اور پہلی بار گھر خریدار ہونے چاہیں۔ RESP: آپ کھولنے کے بعد 31 سال تک شراکت کر سکتے ہیں، لیکن گرانٹیں عام طور پر بچے کے 17 سال کی عمر تک بند ہو جاتی ہیں۔",
+    spus_audit_intro: "مثال کے طور پر، ",
+    spus_audit_link: "یہاں SPUS کے لیے آزاد ثالثی ہے",
+    spus_audit_suffix: " (AAOIFI معیار کے مطابق) جو اسے شرعت کے لحاظ سے منطبق سمجھتا ہے۔",
+    diy: "DIY (اپنے آپ کو کریں)",
+    growthComparison: "20 سالہ نمو کا موازنہ",
+    startingWith: "2005 میں $100 سے شروع کریں",
+    standardETFs: "معیاری ETFs (مثال کے طور پر S&P 500)",
+    standardETFsPrice: "$680",
+    halalETFs: "حلال ETFs (مثال کے طور پر SPUS)",
+    halalETFsPrice: "$655",
+    faq_fhsa_no_home_title: "اگر میں FHSA کے ساتھ گھر نہیں خریدتا تو کیا ہوتا ہے؟",
+    faq_fhsa_no_home_p: "اگر آپ 15 سال میں گھر نہیں خریدتے، تو آپ FHSA بیلنس کو بغیر ٹیکس کے RRSP میں منتقل کر سکتے ہیں (اور RRSP روم کو متاثر کیے بغیر)۔ اگر آپ اسے نقد نکالتے ہیں تو یہ مکمل طور پر آمدنی کے طور پر ٹیکس ہے۔",
     whatMakesHalal: "کون سی چیز اسٹاک کو حلال بناتی ہے؟",
     businessScreening: "1. کاروباری اسکریننگ",
     businessScreeningDesc: "کمپنی اپنی رقم درج ذیل سے نہیں بنا سکتی: سود (بینکیں)، شراب، تمباکو، جوا، بالغوں کی تفریح، یا سور کی پیداوار۔",
